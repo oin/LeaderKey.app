@@ -228,6 +228,11 @@ class AppDelegate: NSObject, NSApplicationDelegate,
 
   private func handleURL(_ url: URL) {
     guard url.scheme == "leaderkey" else { return }
+    
+    if url.host == "hide" {
+      hide()
+      return
+    }
 
     show()
 
